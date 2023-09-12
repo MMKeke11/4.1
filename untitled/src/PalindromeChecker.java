@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class PalindromeChecker {
 
     public static void main(String[] args) {
+        //main method that tells the user if the input is a palindrome
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
 
@@ -24,8 +25,11 @@ public class PalindromeChecker {
     }
 
     public static boolean checkPalindrome(String input) {
+        // CheckPalindrome method that returns boolean value true or false
         String reversed = reverseString(input);
+        // Simplified return statement to improve readability
         return input.equals(reversed);
+
     }
 
     public static String reverseString(String input) {
