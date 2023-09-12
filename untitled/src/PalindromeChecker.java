@@ -17,19 +17,13 @@ public class PalindromeChecker {
     }
 
     public static String transformInput(String input) {
-        input = input.toLowerCase();
-        input = input.replace(",", "");
+        input = input.toLowerCase().replace(",", "");
         input = input.replace("!", "");
         return input;
     }
 
     public static boolean checkPalindrome(String input) {
-        String reversed = reverseString(input);
-        if (input.equals(reversed)) {
-            return true;
-        } else {
-            return false;
-        }
+        return input.equals(reverseString(input));
     }
 
     public static String reverseString(String input) {
