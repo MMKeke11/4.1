@@ -22,6 +22,7 @@ public class PalindromeChecker {
         return input;
     }
 
+    // check input compared to reverseString()
     public static boolean checkPalindrome(String input) {
         return input.equals(reverseString(input));
     }
