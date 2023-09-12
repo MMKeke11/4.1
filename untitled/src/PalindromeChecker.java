@@ -10,18 +10,13 @@ public class PalindromeChecker {
         String transformed = transformInput(input);
 
         boolean isPalindrome = checkPalindrome(transformed);
-        if (isPalindrome) {
-            System.out.println("The transformed input is a palindrome.");
-        } else {
-            System.out.println("The transformed input is not a palindrome.");
-        }
+        String isOrNot = isPalindrome ? "" : "not ";
+        System.out.println("The transformed input is " + isOrNot + "a palindrome.");
     }
 
     public static String transformInput(String input) {
-        input = input.toLowerCase();
-        input = input.replace(",", "");
-        input = input.replace("!", "");
-        return input;
+        // return the input with commas and exclamation points removed
+        return input.toLowerCase().replace(",", "").replace("!", "");
     }
 
     public static boolean checkPalindrome(String input) {
